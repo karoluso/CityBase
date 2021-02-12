@@ -33,7 +33,7 @@ namespace CityBase.Commands
                 GetCommandsList();
                 Console.Write("\nChoose command number: ");
 
-                input = int.Parse(Console.ReadLine());
+                int.TryParse(Console.ReadLine(), out input); // if user gives null or text input will be 0
                 if (input == 5)
                 {
                     Console.WriteLine("\nBye  Bye ...");
@@ -45,7 +45,7 @@ namespace CityBase.Commands
                 }
                 else
                 {
-                    Console.WriteLine("Wrong input; try again.");
+                    Console.WriteLine("Incorrect input; try again.");
                 }
                 Console.ReadKey();
             } while (true);

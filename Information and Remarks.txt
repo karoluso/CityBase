@@ -1,5 +1,5 @@
 Add some validations and excemptions handling
 check access time for loading from file and file update for more items 
 Do some choice for memory database
-reconnect ot git
+DONE reconnect ot git
 
