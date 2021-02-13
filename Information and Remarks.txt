@@ -1,5 +1,5 @@
 
-implement overflow exception handling
+list of all  estates to be sorted in order by numbers
 check access time for loading from file and file update for more items 
 Add exception logger class
 Do some choice for memory database
@@ -10,3 +10,4 @@ Done:
 reconnect ot git;
 Add some validations and excemptions handling
 Add excemption if you want to add an estate with existing number
+implement overflow exception handling

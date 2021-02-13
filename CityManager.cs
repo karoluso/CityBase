@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
+﻿
 using CityBase.Estates;
 using System.Linq;
 using CityBase.Data;
@@ -16,6 +13,7 @@ namespace CityBase
         {
             _iDatabase = iDatabase;
         }
+
         public void AddEstate(Estate estate)
         {
             if (_iDatabase.GetAllEstates().Any() && _iDatabase.GetAllEstates().Any(x => x.Number == estate.Number))
@@ -28,6 +26,7 @@ namespace CityBase
             newItem.Number = nextNumber;
             _iDatabase.AddEstate(newItem);
         }
+
         private int GetNextNumber()
         {
             int number = _iDatabase.GetAllEstates().Any() ? (_iDatabase.GetAllEstates().Max(x => x.Number) + 1) : 1;

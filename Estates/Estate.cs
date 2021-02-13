@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Sockets;
-using System.Text;
+
 
 namespace CityBase.Estates
 {
@@ -13,15 +12,17 @@ namespace CityBase.Estates
         public decimal Width { get; }
         public decimal Price { get; }
         public Property Property { get; }
+        
         public decimal Area
         {
             get {return Width * Length; }
-
         }
+
         public decimal PricePerSqrMeter
         {
             get { return decimal.Round((Price / Area),2); }
         }
+
         public DateTime DateCreated { get; }
         public DateTime DateControlled { get; }
 
@@ -36,7 +37,6 @@ namespace CityBase.Estates
             Property = property;
             DateCreated = dateCreated;
             DateControlled = DateCreated.AddYears(3);
-
         }
 
         public Estate(string address, decimal length, decimal width, decimal price, Property property,DateTime dateCreated)
@@ -49,7 +49,6 @@ namespace CityBase.Estates
             Property = property;
             DateCreated = dateCreated;
             DateControlled = DateCreated.AddYears(3);
-
         }
 
         public bool CheckControlDate(Estate estate)
@@ -62,11 +61,9 @@ namespace CityBase.Estates
         {
             return new List<string>();
         }
-
-
-
-
     }
+
+
     public enum Property    //this is already beyond Estate Class !
     {
         City,

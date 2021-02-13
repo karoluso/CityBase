@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using CityBase.CityBase.Utils;
 using CityBase.Data;
 
@@ -24,21 +22,21 @@ namespace CityBase.Commands
                 Console.WriteLine("\nEstate details\n=====================");
                 EstatePrinter.Print(estate);
             }
-            catch (FormatException ex)
 
+            catch (FormatException ex)
             {
                 Console.WriteLine("Incorrect number. " + ex.Message);
             }
+
             catch (InvalidOperationException ex)
             {
                 Console.WriteLine("Number does not exist in database. " + ex.Message);
             }
+
             catch (OverflowException ex)
             {
                 Console.WriteLine("Two large input value. " + ex.Message);
             }
-
-
         }
 
         public string GetName()

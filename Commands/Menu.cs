@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using CityBase.Data;
 using System.Linq;
-using System.Threading.Channels;
-using Console = System.Console;
 
 namespace CityBase.Commands
 {
@@ -26,23 +23,29 @@ namespace CityBase.Commands
         public void Run()
         {
             int input;
+
             do
             {
                 Console.Clear();
                 Console.WriteLine("MENU:\n==================");
+
                 GetCommandsList();
+
                 Console.Write("\nChoose command number: ");
 
                 int.TryParse(Console.ReadLine(), out input); // if user gives null or text, input will be 0
+                
                 if (input == 5)
                 {
                     Console.WriteLine("\nBye  Bye ...");
                     break;
                 }
+
                 if (dictionaryEstates.ContainsKey(input))
                 {
                     RunCommand(input);
                 }
+
                 else
                 {
                     Console.WriteLine("Incorrect input ");
@@ -50,6 +53,7 @@ namespace CityBase.Commands
 
                 Console.WriteLine("\npress any key to continue...");
                 Console.ReadKey();
+
             } while (true);
 
         }
@@ -60,6 +64,7 @@ namespace CityBase.Commands
             {
                 Console.WriteLine($"{item.Key} - {item.Value.GetName()}");
             }
+
             Console.WriteLine("5 - End");
 
         }

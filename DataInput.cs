@@ -36,7 +36,6 @@ namespace CityBase
 
         public Estate GetDataFromUser()
         {
-
             Console.WriteLine("Wprowadz dane nowej nieruchomosci: \n==============================");
             Console.Write("Podaj numer lub wcisnij enter w celu autmoatycznego ustawienia numeru: ");
             string numtxt = Console.ReadLine();
@@ -46,6 +45,7 @@ namespace CityBase
             {
                 throw isNegative;
             }
+
             else if (_iDatabase.GetAllEstates().Any(x => x.Number == Number))
             {
                 throw new ApplicationException();
@@ -53,13 +53,16 @@ namespace CityBase
 
             Console.Write("Podaj address: ");
             Address = Console.ReadLine();
+
             if (String.IsNullOrEmpty(Address))
+
             {
                 throw new ArgumentException("Nie wprowadzono zadnego adresu.");
             }
 
             Console.Write("Podaj dlugosc: ");
             Length = decimal.Parse(Console.ReadLine());
+
             if (Length <= 0)
             {
                 throw isNotPositive;
@@ -67,6 +70,7 @@ namespace CityBase
 
             Console.Write("Podaj szerokosc: ");
             Width = decimal.Parse(Console.ReadLine());
+
             if (Width <= 0)
             {
                 throw isNotPositive;
@@ -74,21 +78,24 @@ namespace CityBase
 
             Console.Write("Podaj cene: ");
             Price = decimal.Parse(Console.ReadLine());
+
             if (Price < 0)
             {
                 throw isNegative;
             }
+
             Console.WriteLine("Podaj date utworzenia (dd.MM.yyyy : ");
             DateCreated = DateTime.ParseExact(Console.ReadLine(), "dd.MM.yyyy", null);
 
             Property = GetProperty();
+
             if (Property == Property.City)
             {
-               
                     GetOfficeData();
                     return new Office(Address, Number, NumOfFloors, MaxPersons, Length, Width, Price, Property,
                         DateCreated);
             }
+
             else if (Property == Property.Other)
             {
                 GetParcelData();
@@ -103,13 +110,14 @@ namespace CityBase
             Property = Property.Other;
             Console.WriteLine($"Typ ({Estates.Type.Budowlana} / {Estates.Type.Rolna}):  ");
             var typek = Console.ReadLine();
+
             if (typek != Estates.Type.Budowlana.ToString() && typek != Estates.Type.Rolna.ToString())
             {
                 throw new ArgumentException("Invalid type. ");
 
             }
-            Type = (Estates.Type)Enum.Parse(typeof(Estates.Type), typek);
 
+            Type = (Estates.Type)Enum.Parse(typeof(Estates.Type), typek);
         }
 
         private void GetOfficeData()
@@ -117,12 +125,15 @@ namespace CityBase
             Property = Property.City;
             Console.Write("Ilosc pieter: ");
             NumOfFloors = int.Parse(Console.ReadLine());
+
             if (NumOfFloors < 0)
             {
                 throw isNegative;
             }
+
             Console.Write("Msx Ilosc osob: ");
             MaxPersons = int.Parse(Console.ReadLine());
+
             if (MaxPersons < 0)
             {
                 throw isNegative;
@@ -134,11 +145,12 @@ namespace CityBase
             Console.WriteLine("Wybierz rodzaj nieruchomosci: ");
             string[] tableOfPropertyValues = Enum.GetNames(typeof(Property));
             string text = null;
+
             for (int i = 0; i < tableOfPropertyValues.Length; i++)
             {
                 text += $"{i}.{tableOfPropertyValues[i]}  ";
-
             }
+
             Console.WriteLine(text);
             int numer = int.Parse(Console.ReadLine());
 

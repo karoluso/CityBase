@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Xsl;
-using CityBase.CityBase.Utils;
-using CityBase.Data;
 using CityBase.Estates;
 
 namespace CityBase.Commands
@@ -27,28 +22,31 @@ namespace CityBase.Commands
                 _cityManager.AddEstate(estate);
                 Console.WriteLine("\nNew Estate added.");
             }
+
             catch (ApplicationException)
             {
                 Console.WriteLine("Number is already used. ");
             }
+
             catch (FormatException ex)
             {
                 Console.WriteLine("Incorrect value. " + ex.Message);
             }
+
             catch (NullReferenceException ex)
             {
                 Console.WriteLine("Incorrect value. " + ex.Message);
             }
+
             catch (ArgumentException ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
             catch (OverflowException ex)
             {
                 Console.WriteLine("Two large input value. " + ex.Message);
             }
-
-
         }
 
         public string GetName()

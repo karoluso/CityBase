@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using CityBase.Estates;
@@ -27,7 +28,8 @@ namespace CityBase.CityBase.Utils
 
         public static void PrintList(IEnumerable<Estate> estateList)
         {
-            foreach (Estate item  in estateList)
+            
+            foreach (Estate item  in estateList.OrderBy(x=>x.Number))
             {
                 Console.WriteLine(item.Number + " - " + item.Address +$"({item.Property})");
                 Console.WriteLine("Powierzchnia: " + item.Area);
