@@ -1,5 +1,12 @@
-Add some validations and excemptions handling
-check access time for loading from file and file update for more items 
-Do some choice for memory database
-DONE reconnect ot git
 
+implement overflow exception handling
+check access time for loading from file and file update for more items 
+Add exception logger class
+Do some choice for memory database
+
+
+Done:
+-----------------
+reconnect ot git;
+Add some validations and excemptions handling
+Add excemption if you want to add an estate with existing number

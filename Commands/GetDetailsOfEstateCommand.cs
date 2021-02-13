@@ -9,7 +9,6 @@ namespace CityBase.Commands
     class GetDetailsOfEstateCommand:ICommand
     {
         private IDatabase _iDatabase;
-
         public GetDetailsOfEstateCommand(IDatabase iDatabase)
         {
             _iDatabase = iDatabase;
@@ -18,10 +17,25 @@ namespace CityBase.Commands
         {
             Console.Clear();
             Console.WriteLine("Give a number of Estate :");
-            int  num = int.Parse(Console.ReadLine());
-            var estate = _iDatabase.GetEstate(num);
-            Console.WriteLine("\nEstate details\n=====================");
-            EstatePrinter.Print(estate);
+            try
+            {
+                int num = int.Parse(Console.ReadLine());
+                var estate = _iDatabase.GetEstate(num);
+                Console.WriteLine("\nEstate details\n=====================");
+                EstatePrinter.Print(estate);
+            }
+            catch (FormatException ex)
+
+            {
+                Console.WriteLine("Incorrect number. " + ex.Message);
+
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine("Number does not exist in database. " + ex.Message);
+
+            }
+            
         }
 
         public string GetName()

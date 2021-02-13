@@ -15,19 +15,15 @@ namespace CityBase.Data
     {
         private string FileName;
         private List<Estate> EstatesList;
-        private CityManager _cityManager;
-
         public FileDatabase(string fileName)
         {
             EstatesList = new List<Estate>();
             FileName = fileName;
             LoadFromFile().Wait();
-
         }
 
         public void AddEstate(Estate estate)
         {
-
             EstatesList.Add(estate);
             UpdateFile().Wait();
         }
@@ -42,9 +38,10 @@ namespace CityBase.Data
         {
             return EstatesList;
         }
+        
         public Estate GetEstate(int number)
         {
-            return EstatesList.SingleOrDefault(x => x.Number == number);
+            return EstatesList.Single(x => x.Number == number);
         }
 
         private async Task UpdateFile()

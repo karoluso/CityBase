@@ -33,20 +33,22 @@ namespace CityBase.Commands
                 GetCommandsList();
                 Console.Write("\nChoose command number: ");
 
-                int.TryParse(Console.ReadLine(), out input); // if user gives null or text input will be 0
+                int.TryParse(Console.ReadLine(), out input); // if user gives null or text, input will be 0
                 if (input == 5)
                 {
                     Console.WriteLine("\nBye  Bye ...");
                     break;
                 }
-                 if (dictionaryEstates.ContainsKey(input))
+                if (dictionaryEstates.ContainsKey(input))
                 {
                     RunCommand(input);
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect input; try again.");
+                    Console.WriteLine("Incorrect input ");
                 }
+
+                Console.WriteLine("\npress any key to continue...");
                 Console.ReadKey();
             } while (true);
 

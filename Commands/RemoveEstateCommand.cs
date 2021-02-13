@@ -19,9 +19,25 @@ namespace CityBase.Commands
         {
             Console.Clear();
             Console.WriteLine("Give a number of Estate :");
+            try
+            {
             int num = int.Parse(Console.ReadLine());
             _iDatabase.RemoveEstate(num);
             Console.WriteLine($"\nEstate {num} has been reomved. ");
+
+            }
+            catch (FormatException ex)
+
+            {
+                Console.WriteLine("Incorrect number. " + ex.Message);
+
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine("Number does not exist in database. " + ex.Message);
+
+            }
+
         }
 
         public string GetName()
