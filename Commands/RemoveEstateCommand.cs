@@ -37,6 +37,10 @@ namespace CityBase.Commands
                 Console.WriteLine("Number does not exist in database. " + ex.Message);
 
             }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine("Two large input value. " + ex.Message);
+            }
 
         }
 

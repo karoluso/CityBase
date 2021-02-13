@@ -28,14 +28,17 @@ namespace CityBase.Commands
 
             {
                 Console.WriteLine("Incorrect number. " + ex.Message);
-
             }
             catch (InvalidOperationException ex)
             {
                 Console.WriteLine("Number does not exist in database. " + ex.Message);
-
             }
-            
+            catch (OverflowException ex)
+            {
+                Console.WriteLine("Two large input value. " + ex.Message);
+            }
+
+
         }
 
         public string GetName()

@@ -27,7 +27,7 @@ namespace CityBase.Commands
                 _cityManager.AddEstate(estate);
                 Console.WriteLine("\nNew Estate added.");
             }
-            catch (ApplicationException ex)
+            catch (ApplicationException)
             {
                 Console.WriteLine("Number is already used. ");
             }
@@ -42,6 +42,10 @@ namespace CityBase.Commands
             catch (ArgumentException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine("Two large input value. " + ex.Message);
             }
 
 
