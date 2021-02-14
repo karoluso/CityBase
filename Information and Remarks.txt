@@ -1,7 +1,19 @@
+To Do:
+Add some unit tests
 
 
-check access time for loading from file and file update for more items 
-Do some choice for memory database
+Description of the project:
+
+Project for storing estates.
+User can add, remove , display various estates.
+
+Polimorphism nad inhertitance implemented : Estate > Office/Parcel
+Dipendency Injection implemented
+Asynchronous methods for reading and writing data into text file
+Exception handling for all user interface input, additionally exception logging into text file added.
+Command pattern used for menu and UI commands.
+
+
 
 
 Done:
@@ -12,3 +24,12 @@ Add excemption if you want to add an estate with existing number
 implement overflow exception handling
 list of all  estates to be sorted in order by numbers
 Add exception logger class
+check access time for loading from file and file update for more items - still implementation of async and await is doubtful
+
+
+Additional info:
+We can modify to have a choice to work on MemoryDatatbase and FileDatabase.
+- add field IDatabase in Menu,
+- add additional choice for object iDatabase = new MemoryDatabase or FileDatabase,
+- if object iDatabase is a type of MemoryDatabase we can then write some additional menu options
+   for loading from file and also to synchronize memorydatabase with file database.

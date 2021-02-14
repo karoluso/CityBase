@@ -21,7 +21,9 @@ namespace CityBase
 
         static void Main(string[] args)
         {
-           IDatabase iDatabase= new FileDatabase(@"C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Data\DatabaseTextFile.txt");
+            IDatabase iDatabase = new FileDatabase(@"C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Data\DatabaseTextFile.txt");
+
+            //IDatabase iDatabase= new MemoryDatabase();   // optionaly if we want to work on MemoryDatabase
 
             DataInput dataInput = new DataInput(iDatabase);
 
