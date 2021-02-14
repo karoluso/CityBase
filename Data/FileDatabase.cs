@@ -115,6 +115,7 @@ namespace CityBase.Data
                 catch (FileNotFoundException ex)
                 {
                     Console.WriteLine("Nie znaleziono pliku z danymi. "  + ex.Message);
+                    Program.LogException(ex);
                     Console.ReadKey();
                 }
             });

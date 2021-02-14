@@ -23,29 +23,34 @@ namespace CityBase.Commands
                 Console.WriteLine("\nNew Estate added.");
             }
 
-            catch (ApplicationException)
+            catch (ApplicationException ex)
             {
                 Console.WriteLine("Number is already used. ");
+                Program.LogException(ex);
             }
 
             catch (FormatException ex)
             {
                 Console.WriteLine("Incorrect value. " + ex.Message);
+                Program.LogException(ex);
             }
 
             catch (NullReferenceException ex)
             {
                 Console.WriteLine("Incorrect value. " + ex.Message);
+                Program.LogException(ex);
             }
 
             catch (ArgumentException ex)
             {
                 Console.WriteLine(ex.Message);
+                Program.LogException(ex);
             }
 
             catch (OverflowException ex)
             {
                 Console.WriteLine("Two large input value. " + ex.Message);
+                Program.LogException(ex);
             }
         }
 

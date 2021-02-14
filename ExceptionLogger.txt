@@ -1,0 +1,64 @@
+﻿Date: 14.02.2021 12:08:16 
+Details:  System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at CityBase.Commands.GetDetailsOfEstateCommand.Run() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Commands\GetDetailsOfEstateCommand.cs:line 20 
+MethodBase: Void ThrowOverflowOrFormatException(ParsingStatus, System.TypeCode) 
+
+--------------------------------
+Date: 14.02.2021 12:08:28 
+Details:  System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at CityBase.Commands.GetDetailsOfEstateCommand.Run() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Commands\GetDetailsOfEstateCommand.cs:line 20 
+MethodBase: Void ThrowOverflowOrFormatException(ParsingStatus, System.TypeCode) 
+
+--------------------------------
+Date: 14.02.2021 12:09:11 
+Details:  System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at CityBase.Commands.GetDetailsOfEstateCommand.Run() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Commands\GetDetailsOfEstateCommand.cs:line 20 
+MethodBase: Void ThrowOverflowOrFormatException(ParsingStatus, System.TypeCode) 
+
+--------------------------------
+Date: 14.02.2021 12:09:19 
+Details:  System.OverflowException: Value was either too large or too small for an Int32.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at CityBase.Commands.GetDetailsOfEstateCommand.Run() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Commands\GetDetailsOfEstateCommand.cs:line 20 
+MethodBase: Void ThrowOverflowOrFormatException(ParsingStatus, System.TypeCode) 
+
+--------------------------------
+Date: 14.02.2021 12:09:23 
+Details:  System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.ThrowHelper.ThrowNoMatchException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   at CityBase.Data.FileDatabase.GetEstate(Int32 number) in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Data\FileDatabase.cs:line 43
+   at CityBase.Commands.GetDetailsOfEstateCommand.Run() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Commands\GetDetailsOfEstateCommand.cs:line 21 
+MethodBase: Void ThrowNoMatchException() 
+
+--------------------------------
+Date: 14.02.2021 12:09:37 
+Details:  System.OverflowException: Value was either too large or too small for a Decimal.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseDecimal(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at System.Decimal.Parse(String s)
+   at CityBase.DataInput.GetDataFromUser() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\DataInput.cs:line 60
+   at CityBase.Commands.AddEstateCommand.Run() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Commands\AddEstateCommand.cs:line 21 
+MethodBase: Void ThrowOverflowOrFormatException(ParsingStatus, System.TypeCode) 
+
+--------------------------------
+Date: 14.02.2021 12:09:43 
+Details:  System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.ThrowHelper.ThrowNoMatchException()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   at CityBase.Data.FileDatabase.RemoveEstate(Int32 number) in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Data\FileDatabase.cs:line 32
+   at CityBase.Commands.RemoveEstateCommand.Run() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Commands\RemoveEstateCommand.cs:line 22 
+MethodBase: Void ThrowNoMatchException() 
+
+--------------------------------

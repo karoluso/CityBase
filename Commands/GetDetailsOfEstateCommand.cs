@@ -26,16 +26,19 @@ namespace CityBase.Commands
             catch (FormatException ex)
             {
                 Console.WriteLine("Incorrect number. " + ex.Message);
+                Program.LogException(ex);
             }
 
             catch (InvalidOperationException ex)
             {
                 Console.WriteLine("Number does not exist in database. " + ex.Message);
+                Program.LogException(ex);
             }
 
             catch (OverflowException ex)
             {
                 Console.WriteLine("Two large input value. " + ex.Message);
+                Program.LogException(ex);
             }
         }
 

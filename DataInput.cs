@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Channels;
 using CityBase.Data;
 using CityBase.Estates;
-//using CityBase.Estates.Type;
 
 
 namespace CityBase
