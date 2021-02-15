@@ -48,7 +48,11 @@ namespace CityBase.Commands
 
                 else
                 {
+                    //change of text colour 
+                        var actualColor = Console.ForegroundColor;
+                        Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Incorrect input ");
+                    Console.ForegroundColor = actualColor;
                 }
 
                 Console.WriteLine("\npress any key to continue...");

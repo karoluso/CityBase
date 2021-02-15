@@ -203,3 +203,10 @@ Details:  System.FormatException: Input string was not in a correct format.
 MethodBase: Void ThrowOverflowOrFormatException(ParsingStatus, System.TypeCode) 
 
 --------------------------------
+Date: 15.02.2021 11:39:00 
+Details:  System.ArgumentException: Nie wprowadzono zadnego adresu.
+   at CityBase.DataInput.GetDataFromUser() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Data\DataInput.cs:line 59
+   at CityBase.Commands.AddEstateCommand.Run() in C:\Users\Dom\Desktop\SzkolaSzarpania-CityBase kopia przed praca domowa z wzorcow\CityBase\Commands\AddEstateCommand.cs:line 21 
+MethodBase: CityBase.Estates.Estate GetDataFromUser() 
+
+--------------------------------
