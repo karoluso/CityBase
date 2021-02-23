@@ -1,5 +1,6 @@
 To Do:
 Add some unit tests
+-inlcuding tests of axception handling and some automatic random tests if doable
 
 
 Description of the project:

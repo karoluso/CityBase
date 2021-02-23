@@ -35,7 +35,7 @@ namespace CityBase
             Console.WriteLine("Wprowadz dane nowej nieruchomosci: \n==============================");
             Console.Write("Podaj numer lub wcisnij enter w celu autmoatycznego ustawienia numeru: ");
             string numtxt = Console.ReadLine();
-            Number = !String.IsNullOrEmpty(numtxt) ? int.Parse(numtxt) : default;
+            Number = !String.IsNullOrEmpty(numtxt) ? int.Parse(numtxt) : default; //if no number given then number =0
 
             if (Number < 0)
             {
